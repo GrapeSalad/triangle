@@ -2,37 +2,27 @@
 // Equilateral: All sides are equal.
 // Isosceles: Exactly 2 sides are equal.
 // Scalene: No sides are equal.
-// NOT a triangle: The sum of the lengths of any two sides of a triangle is less than or equal to the length of the third side.
+// NOT a triangle: The sum of the lengths of any two sides of a triangle is less than or equal to the length of the third side. //a+b>c  && b+c>a  && a+c>b
 var triangleTest = function(side1, side2, side3) {
-  console.log(side1, side2, side3);
-  if (
-  ( side1 + side2 <= side3 ) ||
-  ( side1 + side3 <= side2 ) ||
-  ( side2 + side3 <= side1 )
-    ) {
-        var triangleType = "Not a Triangle (that we know of)";
-        return triangleType;
-      }
-  else {
-    if ( side1 === side2 && side2 === side3 ) {
-      var triangleType = "equilateral";
-      return triangleType;
-    }
-    else if (
-        ( side1 === side2 && side1 === side3 ) ||
-        ( side2 === side3 && side2 === side1 ) ||
-        ( side3 === side1 && side3 ===side2 )
-        )  {
-            var triangleType = "isosceles";
-            return triangleType;
-          }
-    else
-    //if ( side1 != side2 || side2 != side3 || side1 != side3)
-      {
-        var triangleType = "scalene";
-        return triangleType;
-      }
+  if ( side1 === side2 && side2 === side3 ) {
+    var triangleType = "equilateral";
+    return triangleType;
   }
+  else if ( (side1===side2 || side1===side3) || side2===side3){
+    var triangleType = "isosceles";
+    return triangleType;
+  }
+
+  else if ( (!(side1===side2) && !(side1===side3) ) && !(side2===side3) ){
+    var triangleType = "scalene";
+    return triangleType;
+  }
+
+  else {
+    var triangleType = "Not a Triangle (that we know of)";
+    return triangleType;
+  }
+
 };
 
 
