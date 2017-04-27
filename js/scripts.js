@@ -39,14 +39,21 @@ $(document).ready(function(){
     $("#output").text(result);
 //triangle representation???!?!?!?!?!?!!?!!?!?!?
 
-    var sheet = document.createElement('style')
-    var teststyle = "#arrow-up { padding-top: 50px; width: 0; height: 0; border-left: " + side1 + "px solid transparent; border-right: " + side2 + "px solid transparent; border-bottom: " + side3 + "px solid black;}";
+    if( result === "equilateral"){
 
-    // var teststyle = "#arrow-up { padding-top: 50px; width: 0; height: 0; border-left: 30px solid transparent; border-right: 50px solid transparent; border-bottom: 50px solid black;}"
-    sheet.innerHTML = teststyle;
+      var height = ( Math.sqrt(3) / 2 * side1 )
+      console.log = height;
+      var borderLeft = 0.5 * side1;
+      var borderRight = 0.5 * side1;
 
-    document.body.appendChild(sheet);
+      var sheet = document.createElement('style')
+      var teststyle = "#arrow-up { padding-top: 0px; width: 0; height: 0; border-left: " + borderLeft + "px solid transparent; border-right: " + borderRight + "px solid transparent; border-bottom: " + height + "px solid black;}";
 
+      // var teststyle = "#arrow-up { padding-top: 50px; width: 0; height: 0; border-left: 30px solid transparent; border-right: 50px solid transparent; border-bottom: 50px solid black;}"
+      sheet.innerHTML = teststyle;
+
+      document.body.appendChild(sheet);
+    };
 
 
   });

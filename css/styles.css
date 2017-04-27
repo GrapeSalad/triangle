@@ -1,6 +1,14 @@
+#output {
+  border: 0px 10px 20px 30px;
+}
 
 
 
 
-
-/*#arrow-up { padding-top: 50px; width: 0; height: 0; border-left: 30px solid transparent;      border-right: 50px solid transparent; border-bottom: 50px solid black;}*/
+/*#arrow-up {
+padding-top: 50px;
+width: 0;
+height: 0;
+border-left: 30px solid transparent;
+border-right: 50px solid transparent;
+border-bottom: 50px solid black;}*/
